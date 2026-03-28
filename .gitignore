@@ -52,3 +52,7 @@ mlruns/
 *.safetensors
 *.bin
 *.h5
+*.pt
+*.pth
+*.safetensors
+outputs/
