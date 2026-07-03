@@ -39,6 +39,11 @@
 | `git config` | **config**uration | Git 설정 (`--global` = 전역) |
 | `git log` | log | 세이브(커밋) 기록 보기 |
 | `git diff` | **diff**erence | 뭐가 바뀌었는지 비교 |
+| `git commit -q` | `-q` = **q**uiet | 커밋할 때 출력 최소화(조용히) |
+| `git push` | push | 로컬 커밋을 원격(GitHub)으로 올리기 |
+| `git push origin 브랜치` | origin = 원격 별명 | 그 브랜치를 GitHub로 올리기 |
+
+> `origin` = 원격 저장소(GitHub 주소)에 붙인 **별명(이름표)**.
 
 > ⚠️ 같은 `-m`이라도 명령마다 뜻이 다름: `commit -m`=message, `branch -m`=move.
 
@@ -59,6 +64,8 @@
 | `man` | **man**ual | 명령어 설명서 |
 | `chmod` | **ch**ange **mod**e | 파일 권한 변경 |
 | `df` / `du` | **d**isk **f**ree / **d**isk **u**sage | 디스크 용량 |
+| `tail` | tail (꼬리) | 결과의 **끝** 몇 줄만 보기 (`tail -3` = 끝 3줄) |
+| `head` | head (머리) | 결과의 **앞** 몇 줄만 보기 |
 
 ---
 
@@ -84,6 +91,8 @@
 | `~` | 내 **홈 폴더** | `cd ~` |
 | `&` | **백그라운드**로 실행 | `streamlit run app.py &` |
 | `=` | 옵션에 값 지정 | `--port=8080` |
+| `2>&1` | 에러 출력(2번)을 정상 출력(1번)에 **합치기** | `... 2>&1 \| tail` |
+| 종료코드 `0` | 명령 성공 여부: **0=성공**, 0아님=실패 | `echo $?` 로 확인 |
 
 > 💡 짧은 옵션의 뜻은 **명령마다 다름**. 확실히 하려면 긴 옵션(`--message` 등)을 확인.
 
