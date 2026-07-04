@@ -42,8 +42,12 @@
 | `git commit -q` | `-q` = **q**uiet | 커밋할 때 출력 최소화(조용히) |
 | `git push` | push | 로컬 커밋을 원격(GitHub)으로 올리기 |
 | `git push origin 브랜치` | origin = 원격 별명 | 그 브랜치를 GitHub로 올리기 |
+| `git restore 파일` | restore | 고친 걸 마지막 커밋 상태로 되돌리기 |
 
 > `origin` = 원격 저장소(GitHub 주소)에 붙인 **별명(이름표)**.
+
+> 🗂️ **Git 3단계**: 작업폴더(고침) → `git add` → 스테이지(대기줄) → `git commit` → 영구 세이브.
+> `status`에서 "modified"=고쳐짐, "not staged"=아직 add 안 함.
 
 > ⚠️ 같은 `-m`이라도 명령마다 뜻이 다름: `commit -m`=message, `branch -m`=move.
 
@@ -86,7 +90,8 @@
 | `-글자` | 짧은 옵션 (대시 1개 + 글자 1개) | `apt install -y` |
 | `--단어` | 긴 옵션 (대시 2개 + 단어) | `git config --global` |
 | `--이름=값` | 값을 주는 옵션 (`=` 주변 공백 X) | `--server.port=32002` |
-| `>` | 출력을 화면 대신 **파일로** 보내기 | `echo "안녕" > a.txt` |
+| `>` | 출력을 파일에 **덮어쓰기** (기존 내용 날림) | `echo "안녕" > a.txt` |
+| `>>` | 출력을 파일 **맨 뒤에 이어붙이기** (기존 유지) | `echo "한 줄 더" >> a.txt` |
 | `\|` | 왼쪽 결과를 **오른쪽 명령으로** 넘기기 (파이프) | `ps aux \| grep python` |
 | `~` | 내 **홈 폴더** | `cd ~` |
 | `&` | **백그라운드**로 실행 | `streamlit run app.py &` |
